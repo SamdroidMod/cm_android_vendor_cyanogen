@@ -1,0 +1,43 @@
+# Inherit device configuration for Vibrant.
+$(call inherit-product, device/samsung/spica/full_spica.mk)
+
+# Inherit some common cyanogenmod stuff.
+$(call inherit-product, vendor/cyanogen/products/common.mk)
+
+# Include GSM stuff
+$(call inherit-product, vendor/cyanogen/products/gsm.mk)
+
+#
+# Setup device specific product configuration.
+#
+PRODUCT_NAME := cyanogen_spica
+PRODUCT_BRAND := Samsung
+PRODUCT_DEVICE := spica
+PRODUCT_MODEL := GT-I5700
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=FRF91 PRODUCT_NAME=passion BUILD_FINGERPRINT=google/passion/passion/mahimahi:2.2/FRF91/43546:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="passion-user 2.2 FRF91 43546 release-keys"
+
+PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/cyanogen/prelink-linux-arm-spica.map
+
+# Enable Windows Media
+WITH_WINDOWS_MEDIA := true
+
+# Extra Vibrant overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/spica
+
+#
+# Set ro.modversion
+#
+ifdef CYANOGEN_NIGHTLY
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Spica
+else
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.modversion=CyanogenMod-6.1.0-RC0-Spica
+endif
+
+#
+# Copy Vibrant specific prebuilt files
+#
+PRODUCT_COPY_FILES +=  \
+    vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
