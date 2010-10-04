@@ -44,3 +44,6 @@ endif
 #
 PRODUCT_COPY_FILES +=  \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
+
+PRODUCT_PACKAGES += \
+    LatinIME
