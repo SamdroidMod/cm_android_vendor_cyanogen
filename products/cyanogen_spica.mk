@@ -33,17 +33,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/spica
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Spica
+        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Spica-a7
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6.1.0-RC0-Spica
+        ro.modversion=CyanogenMod-6.1.0-RC0-Spica-a7
 endif
 
 #
-# Copy Vibrant specific prebuilt files
+# Copy Spica specific prebuilt files
 #
 PRODUCT_COPY_FILES +=  \
     vendor/cyanogen/prebuilt/mdpi/media/bootanimation.zip:system/media/bootanimation.zip
-
-PRODUCT_PACKAGES += \
-    LatinIME
