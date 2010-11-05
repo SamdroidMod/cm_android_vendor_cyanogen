@@ -19,15 +19,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_liberty BUILD_ID=FRG83 BUILD_DI
 
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/vendor/cyanogen/prelink-linux-arm-liberty.map
 
-#
-# Move dalvik cache to data partition where there is more room to solve startup problems
-#
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.dexopt-data-only=1
-
-#
-# Set ro.modversion
-#
-
+#PRODUCT_PACKAGES += FM
 
 
 ifdef CYANOGEN_NIGHTLY
@@ -35,7 +27,7 @@ ifdef CYANOGEN_NIGHTLY
         ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Liberty
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6.1.0-RC0-Liberty
+        ro.modversion=CyanogenMod-6.1.0-RC1-Liberty
 endif
 
 #

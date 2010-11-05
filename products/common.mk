@@ -59,6 +59,7 @@ include frameworks/base/data/sounds/AudioPackage4.mk
 
 PRODUCT_COPY_FILES += \
     vendor/cyanogen/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/cyanogen/prebuilt/common/bin/verify_cache_partition_size.sh:system/bin/verify_cache_partition_size.sh \
     vendor/cyanogen/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf \
     vendor/cyanogen/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/cyanogen/prebuilt/common/etc/terminfo/l/linux:system/etc/terminfo/l/linux \
@@ -121,7 +122,6 @@ ifdef CYANOGEN_WITH_GOOGLE
         vendor/cyanogen/proprietary/Vending.apk:./system/app/Vending.apk \
         vendor/cyanogen/proprietary/VoiceSearch.apk:./system/app/VoiceSearch.apk \
         vendor/cyanogen/proprietary/YouTube.apk:./system/app/YouTube.apk \
-        vendor/cyanogen/proprietary/com.amazon.mp3.apk:./system/app/com.amazon.mp3.apk \
         vendor/cyanogen/proprietary/googlevoice.apk:./system/app/googlevoice.apk \
         vendor/cyanogen/proprietary/kickback.apk:./system/app/kickback.apk \
         vendor/cyanogen/proprietary/soundback.apk:./system/app/soundback.apk \

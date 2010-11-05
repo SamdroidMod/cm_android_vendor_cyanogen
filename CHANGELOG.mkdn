@@ -15,26 +15,39 @@ Maintainers:
 * Droid: Koush
 * Dream/Sapphire: Cyanogen
 * Hero: Lox (GSM), Darchstar (CDMA)
-* Desire: Kali-, Defer
+* Desire (GSM/CDMA): Kali-, Defer
 * Incredible: Koush
 * Espresso (Slide): Wes Garner, Chris Soyars, Cyanogen
 * Supersonic (EVO): Cyanogen, toastcfh
 * Galaxy S (Vibrant): Scepterr, Wes Garner
 * Legend: Alexander Hofbauer
+* Vision: Cyanogen
+
+Translators:
+------------
+* German: Matthias Büchner, Alexander Hofbauer, Sebastian K (DerSeppel), Ricco Thiel
+* Italian: Eugenio Ziliotto, Giulio Cervera
+* Japanese: Takuo Kitame
+* French: Sébastien Vaucher, David Girault
+* Chinese: comercy
+* Russian: Oleg Krikun
+* Portuguese: Eduardo Martins
+* Spanish: PeRiJeY
 
 CHANGELOG
 ---------
 ### 6.1.0
-* Common: ADWLauncher 1.1.5 - Ander Webbs
+* Common: Update to Android 2.2.1
+* Common: Various bugfixes from AOSP and CodeAurora
+* Common: ADWLauncher 1.2.0 - Ander Webbs
 * Common: Configurable audio focus for music app - Jonas Larsson
 * Common: APN cleanup (fixes many issues with GPS and MMS) - Cyanogen
 * Common: Use ARMv6 optimizations for DS/Hero targets - Ninpo
 * Common: AudioDSP updates - Antti S. Lankila
 * Common: Status bar themes - Michael Webster
-* Common: Email app updates - Michael Webster
+* Common: Email app updates** - Michael Webster
 * Common: Selected kernel optimizations - Kernelzilla
 * Common: EMMC support - Koush
-* Common: Long press back button to kill foreground process - Evan Charlton 
 * Common: Camcorder touch-to-focus - Cyanogen
 * Common: Notification "quiet hours" - Evan Charlton
 * Common; Superuser 2.3.6 - Adam Shanks (ChainsDD)
@@ -43,9 +56,39 @@ CHANGELOG
 * Common: Control locking of MMS app in memory - Julian J. M
 * Common: Kill foreground app by long-pressing back - Evan Charlton
 * Common: New AppWidgetPicker dialog - boombuler@XDA
+* Common: FileManager app - OpenIntents (graphics update from Fitsnugly)
+* Common: Anonymous install statistics gathering - Chris Soyars
+* Common: Stable shot camera mode - Cyanogen
+* Common: Dual-mode snooze (long press dismiss) - Evan Charlton
+* Common: Compose SMS/MMS via search button long press - Wes Garner
+* Common: Notification category support - Pedlar
+* Common: Galaxy S style power widget in notification bar - Pedlar
+* Common: Autodetect if we should use /cache for system dex files - Kali-
+* Common: Quick PIN unlock - gsarrica
+* Common: Increase performance of Gallery3D caching system - Androbot
+* Common: Gallery3D bugfixes and improvements - CodeAurora
+* Common: Gallery3D highres patches - Petar Šegina
+* Common: Skia performance enhancements - CodeAurora
+* Common: APN list update - Paul Weiss
+* Common: Fix AGPS issues on all platforms
+* Common: Ability to customize location to save attachments in MMS - Wes Garner
+* Common: Dismiss notifications by swiping - Evan Charlton
+* Common: Enabled Sound Recorder app
+* Common: Bluetooth OBEX performance boost - Sony
+* Common: Updated Terminal Emulator app - Jack Palevich
+* Common: Updated headset drawables - blunden
+* N1/Bravo/Supersonic: FM Radio support - MIUI - http://miui.com (graphics from Fitsnugly, HaXzAmaTiC, and blunden)
 * N1/DS - Kernel 2.6.35 based on Pershoot's repository
+* DS: Updated hardware drivers from official release
+* DS: CompCache sizes can be adjusted through CMParts - Wes Garner
 * Supersonic - Kernel 2.6.34 courtesy of Toast and Madcoder
 * Bravo: Kernel 2.6.35
+* Espresso: Improve backlights - Wes Garner
+* Espresso: Kernel OC patch - dumfuq (no OC by default)
+* Legend/Supersonic: Proper notification light support - Alex Hofbauer
+
+** Note on Email update: This requires a one-time wipe of application settings.
+                      Note that this will not affect your accounts themselves.
 
 ### 6.0.0
 * ANDROID: Google, HTC, Qualcomm, and everybody else.  We <3 U
@@ -76,7 +119,6 @@ CHANGELOG
 * Common: Enhanced accelerometer settings - Jonas Larsson
 * Common: A2DP bugfixes - Glenn Maynard
 * Common: Browser fullscreen mode and other enhancements - Wysie
-* Common: Translations: Takuo Kitame, Matthias Büchner, Eug89, comercy
 * Common: Major build system enhancements by Chris Soyars & Koush
 * Common: Long press volume buttons to skip songs - Jon Boekenoogen
 * Common: Accelerated ARMv7 JPEG and PNG decoding - Qualcomm

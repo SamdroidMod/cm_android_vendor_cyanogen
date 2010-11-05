@@ -17,10 +17,17 @@ PRODUCT_MODEL := HTC Desire
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=FRG83 PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo/bravo:2.2/FRF91/226611:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="2.10.405.2 CL226611 release-keys"
 
-# Include the Torch app
-PRODUCT_PACKAGES += Torch
+# Build kernel
+PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
+PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
+PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_bravo_defconfig
 
-# Extra Passion overlay
+# Include the Torch and FM apps
+PRODUCT_PACKAGES += \
+    Torch \
+    FM
+
+# Extra Bravo (CDMA/GSM) overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/bravo
 
 # Extra RIL settings
@@ -40,7 +47,7 @@ ifdef CYANOGEN_NIGHTLY
         ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Desire
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6.1.0-RC0-Desire
+        ro.modversion=CyanogenMod-6.1.0-RC1-Desire
 endif
 
 #
